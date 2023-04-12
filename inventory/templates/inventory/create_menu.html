@@ -1,0 +1,53 @@
+
+{%extends 'base.html'%}
+{%block topnavbar%}
+<a href="{% url 'menu' %}">back</a>
+    {%endblock%}
+{%block content%}
+
+<h1>create menu</h1>
+
+
+
+<form method='post'>
+	{%csrf_token%}
+    
+    <input type="hidden" name="forms_data" id="forms_data" data-prefix="{{ formset.prefix }}" data-extra="{{ formset.extra }}">
+   {{ form.as_p }}
+   
+    <table >
+        {{ formset.management_form }}
+       
+        {% for form in formset %}
+            <tr class="form-row">      
+                {{form.id}}
+                        
+                    <td >
+                        {{form.ingredient.label }}
+                        {{ form.ingredient }}
+                       
+                    </td>
+                     <td >
+                        {{form.quantity.label }}
+                        {{ form.quantity }}
+
+                        
+                    </td>
+                
+                
+            </tr>
+        {% endfor %}
+       <tr class="add-row"><td colspan="4"><a href="#">Add another Recipe requirement</a></td></tr>
+    
+    
+    </table>
+
+    <input type="submit" name="submit">
+</form>
+
+
+    
+	{{ form.media }}
+
+
+{%endblock%}

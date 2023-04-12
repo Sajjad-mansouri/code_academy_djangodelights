@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block topnavbar%}
+<a href="{% url 'inventory' %}">back</a>
+	{%endblock%}
+{%block content%}
+<h1>Ingredient</h1>
+
+
+
+
+
+  <table class="data-table">
+    <thead>
+      <tr>
+	<th>title</th>
+		<th>unit</th>
+			<th>amount for this menu</th>
+			<th>total amount</th>
+				
+
+
+</tr>
+    </thead>
+    <tbody>
+{% for ingredient in reciperequirements %}
+	<tr>
+		
+		<td>{{ingredient.ingredient.title}}</td>
+		<td>{{ingredient.ingredient.get_unit_display}}</td>
+		<td>{{ingredient.quantity}}</td>
+		<td>{{ingredient.ingredient.quantity}}</td>
+
+
+
+	</tr>
+	{% endfor %}
+
+    </tbody>
+  </table>
+{% endblock%}

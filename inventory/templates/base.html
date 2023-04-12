@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{%static 'inventory/css/style.css'%}">
+	<title></title>
+</head>
+<body>
+
+<div class='content'>
+	<div>
+		<a href="{%url 'home'%}">
+		<img src="{%static 'inventory/icon/waiter.svg'%}" alt="SVG Image" width="50px">
+	<img src="{%static 'inventory/icon/Restaurant1.svg'%}" alt="SVG Image" width="50px">
+	<img src="{%static 'inventory/icon/pizza.svg'%}" alt="SVG Image" width="50px">
+	
+	</a>	
+	</div>
+
+<div class='top-navbar'>
+	{%block topnavbar%}
+	{%endblock%}
+		
+	
+	
+</div>
+	
+{%block content%}
+{%endblock%}
+</div>
+</body>
+</html>
+

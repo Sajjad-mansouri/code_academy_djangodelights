@@ -1,0 +1,38 @@
+
+{%extends 'base.html'%}
+{%block topnavbar%}
+<a href="{% url 'inventory' %}">back</a>
+<a href="{% url 'create-menu' %}">add new menu</a>
+	{%endblock%}
+{%block content%}
+<h1>Menu</h1>
+
+
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        
+       <th>title</th>
+		<th>price</th>
+		<th>ingredient</th>
+		<th>delete</th>
+		<th>edit</th>
+      </tr>
+    </thead>
+    <tbody>
+{%for item in menuitem_list%}
+	<tr>
+		<td>{{item.title}}</td>
+		<td>{{item.price}}</td>
+		<td><a href="{% url 'menu-ingredient' item.pk %}">see ingredient</a></td>
+		<td><a href="{%url 'delete-menu' item.pk%}">delete</a></td>
+		<th><a href="{%url 'update-menu' item.pk %}">edit</a></th>
+
+	</tr>
+	{% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock%}

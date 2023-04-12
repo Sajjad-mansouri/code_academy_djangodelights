@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block topnavbar%}
+<a href="{% url 'home' %}">back</a>
+	{%endblock%}
+{% block content%}
+<div class='homecontainer'>
+	<div class='homepage'>
+
+		<a href="{% url 'purchase-list' user.pk %}"><img src="{%static 'inventory/icon/new.svg'%}" alt="SVG Image" width="75px"><h1>purchase history</h1></a>
+		
+</div>
+
+
+	<div class='homepage'>	
+		<a href="{% url 'purchase'%}"><img src="{%static 'inventory/icon/history.svg'%}" alt="SVG Image" width="75px"><h1>new purchase</h1></a>
+		</div>
+		
+	</div>	</div>
+{% endblock%}
+
+

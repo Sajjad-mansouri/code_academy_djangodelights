@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+
+<div class='homecontainer'>
+	<div class='homepage'>
+
+		<a href="{% url 'customer'%}"><img src="{%static 'inventory/icon/buy.svg'%}" alt="SVG Image" width="100px"><h1>Buy</h1></a>
+		
+</div>
+
+
+	<div class='homepage'>	
+		<a href="{% url 'inventory' %}"><img src="{%static 'inventory/icon/menu.svg'%}" alt="SVG Image" width="75px"><h1>inventory</h1></a>
+		</div>
+		
+	</div>	</div>
+
+
+
+{% endblock %}

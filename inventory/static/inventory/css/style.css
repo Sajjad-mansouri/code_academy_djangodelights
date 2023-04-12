@@ -1,0 +1,187 @@
+.content{
+	width: 800px;
+	min-height: 400px;
+	position: absolute;
+	top: 100px;
+	left: calc(50% - 400px);
+  background-color: whitesmoke;
+	text-align: center;
+	padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.top-navbar{
+  width: 100%;
+ 
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+a{
+  font-size: 20px;
+  text-decoration: none;
+  color: green;
+}
+.homecontainer{
+	width: 600px;
+	margin:100px auto;
+	text-align: center;
+	
+
+}
+.homepage{
+	display: inline-block;
+	margin-left: 20px;
+}
+.homepage a{
+  font-size: 14px;
+}
+
+
+
+
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* end login form css*/
+
+
+
+/* table css*/
+
+
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.data-table thead th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.data-table tbody td {
+  padding: 10px;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-table tbody tr:hover {
+  background-color: #d8e1e9;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  border-left: none;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  border-right: none;
+}
+
+/*end table*/
+
+
+
+/*select input*/
+
+.select-container {
+  display: flex;
+}
+
+select {
+  width: 200px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+select option {
+  padding: 10px;
+}
+
+select:hover {
+  background-color: #e8e8e8;
+}
+
+select:disabled {
+  opacity: 0.6;
+}
+
+
+
+
+
+.list-content div{
+display: inline-block;
+margin: 15px;
+}
+
+.top-navbar a{
+  display: inline-block;
+  margin: 15px;
+
+
+}

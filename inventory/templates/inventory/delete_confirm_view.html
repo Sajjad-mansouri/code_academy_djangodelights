@@ -1,0 +1,16 @@
+    {%extends 'base.html'%}
+{%block topnavbar%}
+   {%endblock%}
+{%block content%}
+ <p>Are you sure you want to delete the selected < {{ object.title}} >? </p>
+    <form method="post">{% csrf_token %}
+    <div>
+   
+
+    <input type="submit"">
+    <a href="{%url 'menu'%}" class="button cancel-link">No, take me back</a>
+    </div>
+    </form>
+
+
+{%endblock%}

@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% load static%}
+
+{%block topnavbar%}
+
+  
+<a href="{% url 'customer' %}">back</a>
+  {%endblock%}
+{%block content%}
+
+<h1>purchase history</h1>
+<a href="{% url 'purchase'%}"><img src="{%static 'inventory/icon/add.svg'%}" alt="SVG Image" width="50px"></a>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        
+        <th>Menu</th>
+        <th>order time</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{%for order in orders %}
+      <tr>
+        <td>{{order.menu_list}}</td>
+        <td>{{order.order_time}}</td>
+      </tr>
+      {%endfor%}
+
+    </tbody>
+  </table>
+{% endblock%}
+
+
+
+

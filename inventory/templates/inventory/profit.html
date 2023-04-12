@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block topnavbar%}
+<a href="{% url 'inventory'%}">back</a>
+  {%endblock%}
+{%block content%}
+
+
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        
+       <th>income</th>
+		<th>cost</th>
+		<th>profit</th>
+      </tr>
+    </thead>
+    <tbody>
+    		<tr>
+		<th>{{income}}</th>
+		<th>{{cost}}
+</th>
+		<th>{{profit}}
+</th>
+
+	</tr>
+
+    </tbody>
+  </table>
+
+{% endblock%}

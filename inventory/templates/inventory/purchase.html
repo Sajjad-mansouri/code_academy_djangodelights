@@ -1,0 +1,47 @@
+
+{%extends 'base.html'%}
+
+{%block topnavbar%}
+<a href="{% url 'customer' %}">back</a>
+    {%endblock%}
+{%block content%}
+
+<h1>purchase</h1>
+
+
+
+<form method='post'>
+	{%csrf_token%}
+    
+
+    <input type="hidden" name="forms_data" id="forms_data" data-prefix="{{ form.prefix }}" data-extra="{{ form.extra }}">
+      <div class="select-container">
+   
+
+   </div>
+    <table class="{{ table_class }}">
+       {{ form.management_form }}
+        {%for form in form%}
+            <tr class="form-row">      
+
+                       
+                    <td >
+                    	{{form.order.label }}
+                        {{ form.order }}
+                       
+                    </td>   
+                
+            </tr>
+        {%endfor%}
+       <tr class="add-row"><td colspan="4"><a href="#">Add another Order</a></td></tr>
+    </table>
+    <input type="submit" name="submit">
+    </form>
+
+    
+	{{ form.media }}
+
+	
+
+
+{%endblock%}
